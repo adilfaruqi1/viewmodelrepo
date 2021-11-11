@@ -22,10 +22,14 @@ class MainActivity : AppCompatActivity() {
         binding.viewModel = viewModel
 
         binding.btnSearch.setOnClickListener {
-            if (binding.etProfileName.text.isNotBlank()) {
+
+           // viewModel.getUserData(binding.etProfileName.text.toString())
+            viewModel.getVehicles()
+          /*  if (binding.etProfileName.text.isNotBlank()) {
+
                 viewModel.getUserData(binding.etProfileName.text.toString())
                 Log.d("TAG_TAG", "click")
-            }
+            }*/
         }
     }
 }
